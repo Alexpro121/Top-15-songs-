@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #1DB954;
+    --secondary-color: #1DB954;
+    --text-color: #FFFFFF;
+    --background-color: #121212;
+    --card-background: #181818;
+    --hover-color: #282828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.main-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #1DB954 0%, #191414 100%);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in 0.5s backwards;
+}
+
+.song-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    background: var(--card-background);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.song-section:hover {
+    background-color: var(--hover-color);
+}
+
+.song-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-info h2 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.song-info h3 {
+    color: #B3B3B3;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.song-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #B3B3B3;
+}
+
+.play-btn {
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+.play-btn i {
+    font-size: 1.2rem;
+}
+
+.video-link {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.video-link:hover {
+    background: var(--primary-color);
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #191414;
+    color: #B3B3B3;
+    margin-top: 4rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стилі для скроллбару */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1ed760;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .song-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header {
+        padding: 2rem 1rem;
+    }
+
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .song-section {
+        padding: 1rem;
+    }
+}
